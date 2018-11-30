@@ -33,7 +33,7 @@ public class PrizeService {
         return prize;
     }
 
-    private int getPrizeMultiplier(String ticket) {
+    private int getPrizeMultiplier(final String ticket) {
         int multiplier = 0;
 
         switch (ticket.charAt(0)) {
