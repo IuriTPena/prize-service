@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
 @RestController
-@RequestMapping("prize")
+@RequestMapping("${url.base}")
 public class PrizeController {
 
     @Autowired
     PrizeService prizeService;
 
-    @GetMapping("{ticketNumber}")
+    @GetMapping("${url.ticketNumber}")
     public Prize create(@PathVariable String ticketNumber) {
         return prizeService.prizeGenerator(ticketNumber);
     }
